@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About & Agreement | Recipe Recommendation Agent</title>
+
+  <style>
+    /* ===== GLOBAL RESET ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #fff1e6, #ffe8d6);
+      min-height: 100vh;
+      padding: 40px 15px;
+      color: #333;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px 45px;
+      border-radius: 14px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== HEADINGS ===== */
+    h3 {
+      font-size: 26px;
+      margin-bottom: 18px;
+      color: #ff7a18;
+      border-left: 6px solid #ff7a18;
+      padding-left: 14px;
+    }
+
+    /* ===== PARAGRAPHS ===== */
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    /* ===== LIST ===== */
+    ul {
+      margin-top: 12px;
+      margin-left: 22px;
+      margin-bottom: 28px;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    ul li strong {
+      color: #222;
+    }
+
+    /* ===== AGREEMENT SECTION ===== */
+    .agreement {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fff4ec;
+      padding: 16px 18px;
+      border-radius: 8px;
+      border: 1px solid #ffd3b6;
+      margin-top: 30px;
+    }
+
+    .agreement input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .agreement label {
+      font-size: 15.5px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* ===== BUTTON ===== */
+    button {
+      display: none;
+      margin-top: 32px;
+      padding: 15px 24px;
+      background: linear-gradient(135deg, #ff7a18, #ff9f45);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      width: 100%;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(255, 122, 24, 0.45);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .container {
+        padding: 28px 22px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 14.8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h3>About Recipe Recommendation Agent</h3>
+    <p>
+      Welcome to <strong>Recipe Recommendation Agent</strong>, your intelligent cooking companion designed to simplify meal planning and enhance your cooking experience. Our system analyzes available ingredients, user preferences, and past interactions to recommend recipes that are both practical and enjoyable.
+    </p>
+    <p>
+      Whether you are a beginner learning the basics or an experienced cook exploring new cuisines, this platform adapts to your needs by suggesting relevant recipes, generating shopping lists for missing ingredients, and improving recommendations over time using user feedback.
+    </p>
+    <p>
+      Our mission is to promote smart cooking, reduce food waste, save time and money, and encourage healthier eating habits through technology.
+    </p>
+
+    <h3>Terms & Agreement</h3>
+    <ul>
+      <li><strong>Acceptance of Terms:</strong> By accessing and using the Recipe Recommendation Agent, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.</li>
+
+      <li><strong>Data Collection & Usage:</strong> The application may store ingredient lists, favorite recipes, and usage patterns locally to enhance personalization. No personal data is sold or shared with third parties.</li>
+
+      <li><strong>Privacy & Security:</strong> While reasonable measures are taken to protect user data, we cannot guarantee absolute security. Users are encouraged not to store sensitive personal information.</li>
+
+      <li><strong>Recipe Accuracy & Limitations:</strong> Recipes provided are suggestions generated from available data sources and user inputs. Accuracy of ingredients, cooking methods, and nutritional values is not guaranteed.</li>
+
+      <li><strong>Health & Dietary Disclaimer:</strong> The application does not provide medical or nutritional advice. Users with allergies, medical conditions, or dietary restrictions should verify ingredients and consult professionals when necessary.</li>
+
+      <li><strong>User Responsibility:</strong> Users are responsible for verifying ingredient freshness, cooking times, and ensuring safe food preparation practices.</li>
+
+      <li><strong>Service Availability:</strong> The service is provided on an “as-is” basis. We do not guarantee uninterrupted access, availability, or error-free operation at all times.</li>
+
+      <li><strong>Intellectual Property:</strong> All content, designs, and code associated with this project are for educational and demonstration purposes unless stated otherwise.</li>
+
+      <li><strong>Feedback & Improvements:</strong> User feedback may be used to improve system performance and user experience without any obligation of compensation.</li>
+
+      <li><strong>Age Restriction:</strong> Users must be at least 13 years old. Minors should use this application under the supervision of a parent or guardian.</li>
+
+      <li><strong>Modification of Terms:</strong> These terms may be updated periodically. Continued use of the application after changes indicates acceptance of the updated terms.</li>
+    </ul>
+
+    <div class="agreement">
+      <input type="checkbox" id="agree" onchange="toggleButton()" />
+      <label for="agree">I have read and agree to the Terms & Conditions</label>
+    </div>
+
+    <button id="openApp" onclick="openReactApp()">
+      Continue to Recipe Agent →
+    </button>
+
+  </div>
+
+  <script>
+    function toggleButton() {
+      const checkBox = document.getElementById("agree");
+      const button = document.getElementById("openApp");
+      button.style.display = checkBox.checked ? "block" : "none";
+    }
+
+    function openReactApp() {
+      window.location.href = "http://localhost:3000";
+    }
+  </script>
+
+</body>
+</html>

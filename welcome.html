@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome | Recipe Recommendation Agent</title>
+
+  <style>
+    /* ===== GLOBAL RESET ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #fff1e6, #ffe8d6);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    /* ===== PAGE LAYOUT ===== */
+    .page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 25px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      color: #ff7a18;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #555;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+      margin-bottom: 60px;
+    }
+
+    .intro p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 70px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 45px rgba(0,0,0,0.15);
+    }
+
+    .feature-icon {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      color: #ff7a18;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+
+    .feature-card p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #ff7a18, #ff9f45);
+      color: white;
+      padding: 18px 55px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 122, 24, 0.45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(255, 122, 24, 0.6);
+    }
+
+    /* ===== FOOTER NOTE ===== */
+    .footer-note {
+      text-align: center;
+      margin-top: 60px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>🍳 Recipe Recommendation Agent</h1>
+      <p>
+        An intelligent, AI-powered cooking assistant that helps you discover
+        delicious recipes using the ingredients you already have — saving time,
+        reducing food waste, and making cooking enjoyable.
+      </p>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+      <p>
+        The <strong>Recipe Recommendation Agent</strong> is designed to simplify your daily
+        cooking decisions. Instead of searching endlessly for recipes, this application
+        analyzes your available ingredients and preferences to recommend the most suitable
+        dishes you can prepare right away.
+      </p>
+      <p>
+        The system continuously adapts to your choices by learning from your favorite
+        recipes and interactions. It not only suggests meals but also generates shopping
+        lists for missing ingredients, helping you plan your cooking more efficiently.
+      </p>
+      <p>
+        Whether you are a student, a working professional, or a home chef, this platform
+        ensures smarter meal planning with minimal effort.
+      </p>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🥗</div>
+        <h3>Ingredient-Based Suggestions</h3>
+        <p>
+          Enter the ingredients you have, and the system instantly suggests
+          recipes you can prepare without unnecessary shopping.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💡</div>
+        <h3>Smart AI Recommendations</h3>
+        <p>
+          Personalized recommendations improve over time based on your
+          preferences, favorites, and cooking habits.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>Automatic Shopping Lists</h3>
+        <p>
+          Missing an ingredient? Generate a clear shopping list with a single
+          click for stress-free grocery planning.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⏱️</div>
+        <h3>Time & Difficulty Filters</h3>
+        <p>
+          Choose recipes based on cooking time and difficulty to fit your daily
+          schedule and skill level.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">❤️</div>
+        <h3>Favorites & Learning</h3>
+        <p>
+          Save your favorite recipes and receive similar recommendations that
+          match your taste preferences.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Global Cuisines</h3>
+        <p>
+          Explore dishes from multiple cuisines including Indian, Italian,
+          Chinese, Mexican, and more.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <button class="cta-button" onclick="goNext()">
+        Get Started →
+      </button>
+    </section>
+
+    <div class="footer-note">
+      © 2025 Recipe Recommendation Agent · Smart Cooking Made Simple
+    </div>
+
+  </div>
+
+  <script>
+    function goNext() {
+      window.location.href = "agreement.html";
+    }
+  </script>
+
+</body>
+</html>
